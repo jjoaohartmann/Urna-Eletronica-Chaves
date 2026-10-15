@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Urna Eleitoral - Acapulco</title>
+</head>
+
+<body>
+    <main>
+        <!-- Tela 1 -- registro -->
+        <section id="tela-registro" class="tela">
+            <div class="cartao">
+                <h1>Urna Eletrônica da Vila</h1>
+                <p class="sub">Eleição para Síndico da Vila - Projeto fictício e educativo </p>
+                <form id="form-registro" novalidade>
+                    <label for="nome">Nome completo</label>
+                    <input id="nome" type="text" autocomplete="off" placeholder="Ex. : Nhonho da Silva">
+                    <label for="titulo">Título de eleitor ou CPF (fictício)</label>
+                    <input id="titulo" type="text" inputmode="numeric" autocomplete="off" placeholder="11 ou 12 números">
+                    <p id="erro-registro" class="erro" role="alert"></p>
+                    <button type="submit" class="btn-primario">Iniciar votação</button>
+                </form>
+                <div class="links">
+                    <button type="button" id="btn-apuração" class="btn-link">Ver apuração</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tela 2 -- URNA -->
+         <section id="tela-unra" class="tela" hidden>
+            <div class="urna">
+                <div class="visor" aria-live="polite">
+                    <p></p>
+                </div>
+            </div>
+         </section>
+    </main>
+
+</body>
+
+</html>
