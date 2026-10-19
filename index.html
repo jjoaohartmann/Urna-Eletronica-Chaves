@@ -33,12 +33,71 @@
          <section id="tela-unra" class="tela" hidden>
             <div class="urna">
                 <div class="visor" aria-live="polite">
-                    <p></p>
+                    <p class="eleitor" id="eleitor-nome"></p>
+                    <p class="cargo">SÍNDICO DA VILA</p>
+                    <div class="linha-numero">
+                        <span class="rotulo">Número:</span>
+                        <span class="digito" id="d0"></span>
+                        <span class="digito" id="d1"></span>
+                    </div>
+                    <div id="candidato" class="candidato" hidden>
+                        <div class="foto" id="foto"></div>
+                        <div class="dados">
+                            <p><span class="rotulo">Nome:</span><strong id="cand-nome"></strong></p>
+                            <p><span class="rotulo">Partido:</span><strong id="cand-partido"></strong></p>
+                        </div>
+                    </div>
+                    <p id="aviso" class="aviso" hidden></p>
+                    <p class="rodape-visor">Aperte a tecla: <br>VERDE para CONFIRMAR este voto <br>LARANJA para REINICIAR este voto</p>
+                </div>
+                <div class="teclado">
+                    <div class="teclas-num">
+                        <button class="tecla" data-n="1">1</button>
+                        <button class="tecla" data-n="2">2</button>
+                        <button class="tecla" data-n="2">3</button>
+                        <button class="tecla" data-n="2">4</button>
+                        <button class="tecla" data-n="2">5</button>
+                        <button class="tecla" data-n="2">6</button>
+                        <button class="tecla" data-n="2">7</button>
+                        <button class="tecla" data-n="2">8</button>
+                        <button class="tecla" data-n="2">9</button>
+                        <button class="tecla" data-n="2">0</button>
+                    </div>
+                    <div class="teclas-acao">
+                        <button class="tecla branco" id="btn-branco">BRANCO</button>
+                        <button class="tecla corrige" id="btn-corrige">CORRIGE</button>
+                        <button class="tecla confirma" id="btn-confirma">CONFIRMA</button>
+                    </div>
                 </div>
             </div>
          </section>
-    </main>
 
+         <!-- TELA 3 - FIM -->
+          <section id="tela-fim" class="tela" hidden>
+            <div class="fim">
+                <h1>FIM</h1>
+                <p>VOTOU</p>
+                <button type="button" id="btn-novo" class="btn-primario">Novo eleitor</button>
+            </div>
+          </section>
+
+          <!-- APURAÇÃO -->
+           <section id="tela-apuracao" class="tela" hidden>
+            <div class="cartao">
+                 <h1>Apuração</h1>
+                 <p class="sub" id="total-votos"></p>
+                 <table>
+                    <thead><tr><th>Candidatos</th><th>Nº</th><th>Votos</th></th></tr></thead>
+                    <tbody id="tabela-votos"></tbody>
+                 </table>
+                 <div class="links">
+                    <button type="button" id="btn-voltar" class="btn-primario">Voltar</button>
+                    <button type="button" id="btn-zerar" class="btn-link">Zerar urna</button>
+                 </div>
+            </div>
+           </section>
+    </main>
+<script src="app.js"></script>
 </body>
 
 </html>
